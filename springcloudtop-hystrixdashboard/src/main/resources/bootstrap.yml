@@ -1,0 +1,9 @@
+spring:
+   application:
+      name: springcloudtop-hystrixdashboard
+   profiles:
+      active: dev
+   cloud:
+      config:
+         uri: http://192.168.56.101:8888
+         fail-fast: true

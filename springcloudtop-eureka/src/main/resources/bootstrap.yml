@@ -1,0 +1,9 @@
+spring:
+   application:
+      name: springcloudtop-eureka
+   profiles:
+      active: node1
+   cloud:
+      config:
+         uri: http://192.168.56.101:8888
+         fail-fast: true

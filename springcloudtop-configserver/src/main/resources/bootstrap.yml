@@ -1,0 +1,26 @@
+server:
+   port: 8888
+spring:
+   application:
+      name: springcloudtop-configserver
+   cloud:
+      config:
+         server:
+            git:
+               uri: https://github.com/yangwk/springcloudtop-config.git
+               search-paths: /*
+               # timeout in seconds
+               timeout: 30
+               clone-on-start: true
+               force-pull: true
+               # Base directory for local working copy of repository
+               #basedir: target/config
+
+eureka:
+   instance:
+      hostname: ${spring.cloud.client.ip-address}
+      prefer-ip-address: true
+      instance-id: ${spring.cloud.client.ip-address}:${server.port}
+   client:
+      serviceUrl:
+         defaultZone: http://192.168.56.101:8761/eureka/,http://192.168.56.102:8761/eureka/,http://192.168.56.103:8761/eureka/
