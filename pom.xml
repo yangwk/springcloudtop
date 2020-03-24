@@ -21,6 +21,7 @@
 		<module>springcloudtop-turbine</module>
 		<module>springcloudtop-feigh</module>
 		<module>springcloudtop-zuul</module>
+		<module>springcloudtop-seata</module>
 	</modules>
 
 	<dependencies>
